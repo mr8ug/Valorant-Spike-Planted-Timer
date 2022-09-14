@@ -1,0 +1,7 @@
+{
+  "name": "spikeplantedtimer",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
