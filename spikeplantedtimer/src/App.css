@@ -1,0 +1,394 @@
+* {
+  box-sizing: border-box;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  
+
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.Header {
+
+  display: block;
+  background-image: url("./static/images/valorant-agents.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #282c34;
+
+
+}
+
+.Header-Logo {
+  min-width: 50px;
+  max-width: 50px;
+  min-height: 50px;
+  max-height: 50px;
+
+  margin-right: 10px;
+  margin-left: 20px;
+  
+
+
+
+}
+
+.navbar-brand{
+  font-size: 1.2em !important;
+  
+}
+
+.navbar-toggler{
+  border: 1px solid #303030 !important;
+  border-radius: 15px !important;
+  padding: 5px 5px !important;
+}
+
+.nav-link{
+  border: 1px solid #303030 !important;
+  padding: 10px 10px !important;
+  margin: 10px !important;
+  border-radius: 15px !important;
+  text-align: center;
+
+}
+
+.nav-link:hover{
+  background-color: #303030 !important;
+  border: 1px solid #303030 !important;
+  padding: 10px 10px !important;
+  margin: 10px !important;
+  color: white !important;
+}
+
+.nav-link:active{
+  transform: scale(0.95);
+  transition: 0.2s ease-in-out;
+}
+
+.offcanvas{
+  --bs-offcanvas-bg: whitesmoke !important;
+  transition: all 0.1s ease-in-out;
+}
+
+
+.Header p {
+  font-size: 30px;
+
+  color: #ff5100;
+  background: rgba(255, 255, 255, 0);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  -webkit-backdrop-filter: blur(5.9px);
+  backdrop-filter: blur(5.9px);
+  height: max-content;
+  border-radius: 15px;
+
+
+
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+
+}
+
+.Header strong {
+  color: rgb(255, 38, 0);
+  
+}
+
+.Background-Video {
+  /*video auto play*/
+  display: block;
+  position: fixed;
+  top: 0;
+
+
+
+
+  min-width: 100%;
+  min-height: 100%;
+
+  z-index: -100;
+
+  /*center video*/
+  margin: auto;
+
+
+}
+
+.Content {
+  height: calc(100vh - 100px);
+  position: relative;
+  
+  
+
+}
+
+.Card {
+  /*card with glassmorphism*/
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  -webkit-backdrop-filter: blur(5.9px);
+  backdrop-filter: blur(5.9px);
+  
+  
+  
+  padding: 20px;
+
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  
+  
+  width: 85%;
+  
+
+}
+
+.Card p {
+  text-transform: uppercase;
+  color: #ff5100;
+  font-size: 35px;
+}
+
+.Card-Buttons{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+
+/* From uiverse.io by @namecho */
+.Card button,
+.Card button::after {
+  padding: 16px 20px;
+  font-size: 18px;
+  background: linear-gradient(45deg, transparent 5%, #ff013c 5%);
+  border: 0;
+  color: #fff;
+  letter-spacing: 5px;
+  line-height: 1;
+  box-shadow: 6px 0px 0px #00e6f6;
+  outline: transparent;
+  position: relative;
+
+  margin: 10px;
+  text-transform: uppercase;
+
+  
+}
+
+.Card button::after {
+  --slice-0: inset(50% 50% 50% 50%);
+  --slice-1: inset(80% -6px 0 0);
+  --slice-2: inset(50% -6px 30% 0);
+  --slice-3: inset(10% -6px 85% 0);
+  --slice-4: inset(40% -6px 43% 0);
+  --slice-5: inset(80% -6px 5% 0);
+  content: "HOVER ME";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent 3%, #00e6f6 3%, #00e6f6 5%, #ff013c 5%);
+  text-shadow: -3px -3px 0px #f8f005, 3px 3px 0px #00e6f6;
+  clip-path: var(--slice-0);
+}
+
+.Card button:hover::after {
+  animation: 1s glitch;
+  animation-timing-function: steps(2, end);
+}
+
+.Card button:active{
+  box-shadow: 0px 0px 0px #00e6f6;
+  transform: scale(0.95);
+  transition: all 0.1s ease-in-out;
+}
+
+.Valorant-Spike{
+  max-width: 95%;
+}
+
+/*
+#timer{
+  font-family: "Audiowide", sans-serif;
+  font-size: 30px;
+  
+}*/
+
+@keyframes glitch {
+  0% {
+    clip-path: var(--slice-1);
+    transform: translate(-20px, -10px);
+  }
+
+  10% {
+    clip-path: var(--slice-3);
+    transform: translate(10px, 10px);
+  }
+
+  20% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 10px);
+  }
+
+  30% {
+    clip-path: var(--slice-3);
+    transform: translate(0px, 5px);
+  }
+
+  40% {
+    clip-path: var(--slice-2);
+    transform: translate(-5px, 0px);
+  }
+
+  50% {
+    clip-path: var(--slice-3);
+    transform: translate(5px, 0px);
+  }
+
+  60% {
+    clip-path: var(--slice-4);
+    transform: translate(5px, 10px);
+  }
+
+  70% {
+    clip-path: var(--slice-2);
+    transform: translate(-10px, 10px);
+  }
+
+  80% {
+    clip-path: var(--slice-5);
+    transform: translate(20px, -10px);
+  }
+
+  90% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 0px);
+  }
+
+  100% {
+    clip-path: var(--slice-1);
+    transform: translate(0);
+  }
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.Canvas-Background{
+  position: relative;
+  width: 100%;
+  height: calc(50vh - 100px);
+  
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 10px;
+  image-rendering: auto;
+
+  background: #f12711;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(310deg, #f5af19, #f12711);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(310deg, #f5af19, #f12711); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+  
+  backdrop-filter: blur( 5.5px );
+  -webkit-backdrop-filter: blur( 5.5px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+
+@keyframes spikeRunningAnimation{
+  0%{
+    filter: hue-rotate(360deg);
+    opacity: 1;
+    
+  }
+  50%{
+    filter: hue-rotate(270deg);
+    opacity: 0.9;
+  }
+  75%{
+    filter: hue-rotate(180deg);
+    opacity: 0.8;
+  }
+  95%{
+    filter: hue-rotate(125deg);
+    opacity: 0.6;
+  }
+  98%{
+    filter: hue-rotate(90deg);
+    opacity: 0.5;
+  }
+  100%{
+    filter: hue-rotate(0deg);
+    opacity: 0;
+    
+  }
+}
+
+@keyframes spikeStoppingAnimation{
+  0%{
+    filter: hue-rotate(0deg);
+    
+  }
+  100%{
+    filter: hue-rotate(360deg);
+    
+  }
+}
